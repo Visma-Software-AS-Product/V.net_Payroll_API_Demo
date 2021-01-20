@@ -8,7 +8,7 @@
             <div class="panel">
                 <div class="panel-heading">
                     <h3 class="panel-title">
-                        Velg en ansatt
+                        Choose an employee
                     </h3>
                 </div>
                 <div class="panel-body">
@@ -21,7 +21,7 @@
             <div class="panel">
                 <div class="panel-heading">
                     <h3 class="panel-title">
-                        Velg en timetype
+                        Choose a paycode
                     </h3>
                 </div>
                 <div class="panel-body">
@@ -34,22 +34,22 @@
             <div class="panel">
                 <div class="panel-heading">
                     <h3 class="panel-title">
-                        Registerer transaksjon
+                        Register transaction
                     </h3>
                 </div>
                 <div class="panel-body">
-                    <input type="number" id="txtTimer" placeholder="Antall timer" pattern="\d*" name="entry-size">
-                    <input type="number" id="txtPris" placeholder="Pris" pattern="\d*" name="entry-size">
+                    <input type="number" id="txtTimer" placeholder="Number of hours" pattern="\d*" name="entry-size">
+                    <input type="number" id="txtPris" placeholder="Price" pattern="\d*" name="entry-size">
                     
                     <hr/>
 
-                    <button type="button" class="btn btn-primary" onclick="createtransaction()">Registrer timer</button>
+                    <button type="button" class="btn btn-primary" onclick="createtransaction()">Register hours</button>
 
                     <div class="alert alert-success" role="alert" id="transactionsuccess" hidden="true">
                         <span id="txtjobid" hidden="true"></span>
-                        <strong>Transakasjon opprettet!</strong> Trykk på knappen under for å sjekke status.
+                        <strong>Transaction created!</strong> Press the button below to check status.
                         <br />
-                        <button type="button" class="btn" onclick="checktransstatus()">Sjekk status</button>
+                        <button type="button" class="btn" onclick="checktransstatus()">Check status</button>
                         <br />
                         <strong id="transactionstatus"></strong>
                     </div>
@@ -110,14 +110,14 @@
         var selectedEmployee = $("#employeelist").children(".active");
 
         if (selectedEmployee.length != 1) {
-            alert("Du må velge en ansatt");
+            alert("You need to choose an employee");
             return;
         }
 
         var selectedPaycode = $("#paycodelist").children(".active");
 
         if (selectedPaycode.length != 1) {
-            alert("Du må velge en lønnsart");
+            alert("You need to choose a paycode");
             return;
         }
 
