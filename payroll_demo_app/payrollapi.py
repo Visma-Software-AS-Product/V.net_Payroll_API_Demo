@@ -7,13 +7,13 @@ from . import app
 def gettoken():
 
     #Every application/integration gets a unique ClientId/ClientSecret-combination.
-    #The application is created in Visma Developer Portal.
-    client_id = 'vsas_payroll_demo_app' 
-    client_secret = 'NjjMtTILZBhbvMfTiwChMtZSSnDWCFoOQgUgJCZsaOfcXCeLQKeTFtSZytqoBcDN'
+    #The application is created in Visma Developer Portal (https://oauth.developers.visma.com/).
+    client_id = '[YOUR_CLIENTID]' 
+    client_secret = '[YOUR_CLIENT_SECRET]'
 
     #Every company in Visma.net Payroll has a unique Tenant_id.
     #A connection needs to be established between your client and the tenant to enable access.
-    tenant_id = 'a4586720-500d-11eb-9852-0638767d04b5'
+    tenant_id = '[TENANT_ID_OF_COMPANY]'
 
     #The authentication uses standard OAuth2.0 with the Client Credentials flow
     reqdata = 'grant_type=client_credentials'
