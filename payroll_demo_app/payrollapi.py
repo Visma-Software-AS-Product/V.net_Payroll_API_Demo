@@ -1,4 +1,5 @@
 import requests
+import os
 from flask import json, jsonify, request
 
 from . import app
@@ -8,12 +9,12 @@ def gettoken():
 
     #Every application/integration gets a unique ClientId/ClientSecret-combination.
     #The application is created in Visma Developer Portal (https://oauth.developers.visma.com/).
-    client_id = '[YOUR_CLIENTID]' 
-    client_secret = '[YOUR_CLIENT_SECRET]'
+    client_id = os.environ.get('CLIENT_ID') 
+    client_secret = os.environ.get('CLIENT_SECRET')
 
     #Every company in Visma.net Payroll has a unique Tenant_id.
     #A connection needs to be established between your client and the tenant to enable access.
-    tenant_id = '[TENANT_ID_OF_COMPANY]'
+    tenant_id = os.environ.get('TENANT_ID')
 
     #The authentication uses standard OAuth2.0 with the Client Credentials flow
     reqdata = 'grant_type=client_credentials'

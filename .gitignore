@@ -155,3 +155,4 @@ dmypy.json
 *.code-workspace
 
 # End of https://www.toptal.com/developers/gitignore/api/flask,vscode
+.vscode/launch.json

@@ -12,7 +12,10 @@
             "env": {
                 "FLASK_APP": "payroll_demo_app.webapp",
                 "FLASK_ENV": "development",
-                "FLASK_DEBUG": "0"
+                "FLASK_DEBUG": "0",
+                "CLIENT_ID": "vsas_payroll_demo_app",
+                "CLIENT_SECRET": "NjjMtTILZBhbvMfTiwChMtZSSnDWCFoOQgUgJCZsaOfcXCeLQKeTFtSZytqoBcDN",
+                "TENANT_ID": "57cdaafa-cfff-11eb-b60b-0638767d04b5"
             },
             "args": [
                 "run",
